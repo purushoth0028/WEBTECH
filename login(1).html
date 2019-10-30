@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="login1.css">
+    <link href="https://fonts.googleapis.com/css?family=play" rel="stylesheet">
+
+  </head>
+  <body>
+    <center>
+   <div class="signin">
+     <form >
+       <h2 style="color:white;">Log In</h2>
+       <input id="na" type="text" name="username" placeholder="Username" ><br>
+       <input type="text" id="txtAadhar" onblur="AadharValidate();"placeholder="mobile no."/><br>
+         <input   id="nb" type="password"   name="username" placeholder="password"><br>
+       <br><input type="button"   onclick="abcd()" value="Log In" /><br>
+       <br>
+       <br><br>
+     <h6>New user?<a href="signup(1).html">&nbsp;Sign in</a>
+         <h6>Forget Password!<a href="forgot.html">&nbsp;Click Here</a>
+         <h5>Visit the<a href="movie.html">&nbsp;Home page</a>
+         </form>
+
+   </div>
+      
+         <script type="text/javascript">
+    function AadharValidate() {
+        var aadhar = document.getElementById("txtAadhar").value;
+        
+        var adharcardTwelveDigit = /^\d{10}$/;
+        var adharSixteenDigit = /^\d{16}$/;
+        
+        if (aadhar != '') {
+            if (aadhar.match(adharcardTwelveDigit)) {
+                return true;
+            }
+            else if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+            else {
+                alert("invalid mobile Number");
+                return false;
+            }
+        }
+    }
+             function abcd(){
+                 var ac= document.getElementById("na").value;
+                 if(ac==''){
+                     alert("you must fill the required above  details");
+                     return false;
+                 }
+                 else{
+                     alert("successfully registered");
+                 }
+             }
+             
+             function abcd(){
+                 var ad= document.getElementById("nb").value;
+                 if(ad==''){
+                     alert("you must fill the required above details");
+                     return false;
+                 }
+                 else{
+                     alert("successfully registered");
+                 }
+             }
+                        
+</script>
+  </body>
+         </center>
+</html>

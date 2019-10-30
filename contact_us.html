@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title> </title>
+   <link rel="stylesheet" href="style_contact_us.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+ <body>
+   <div class="contact-section">
+     <h1> Contact Us </h1>
+   <br><br>  <div class="border"> </div>
+     <form class="contact-form" action="contact_us.html" method="post">
+       <input type="text" id="na" class="contact-form-text" placeholder="Your name">
+       <input type="email" id="na" class="contact-form-text" placeholder="Your email">
+       <input type="text"  id="na" class="contact-form-text" placeholder="Your phone">
+       <textarea  id="na" class="contact-form-text" placeholder="Your message"></textarea>
+      
+          <button class="contact-form-text-btn" onclick="aaa()" type="button"> Send</button>
+         <a class="skip" href="movie.html"> Home</a><br><br><br><br><br><br>
+     </form>
+   </div>
+ </body>
+    
+    <script>
+        function aaa(){
+                 var ac= document.getElementById("na").value;
+                 if(ac==''){
+                     alert("fill the required above credentials");
+                     return false;
+                 }
+                 else{
+                     alert("we'll send a message to your email");
+                 }
+             }
+    </script>
+ </html>

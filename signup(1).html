@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="signup1.css">
+    <link href="https://fonts.googleapis.com/css?family=play" rel="stylesheet">
+    <style>
+      #msg{
+        visibility:hidden;
+        min-width:250px;
+        background-color:yellow;
+        color:#000;
+        text-align:center;
+        border-radius:2px;
+        padding:16px;
+        position:fixed;
+        z-index:1;
+        right:30%;
+        top:30px;
+        font-size:17px;
+        margin-right:30px;
+      }
+
+      #msg.show{
+        visibility:visible;
+        -webkit-animation:fadein 0.5s,fadeout 0.5s 2.5s;
+        animation:fadein 0.5s,fadeout 0.5s 2.5s;
+      }
+      @-webkit-keyframes fadeout{
+        from{top:0;opacity:0;}
+        to{top:30px;opacity:1;}
+      }
+      @keyframes fadein{
+        from{top:0;opacity:0;}
+        to{top:30px;opacity:1;}
+      }
+      @-webkit-keyframes fadeout{
+        from{top:30px;opacity:1;}
+        to{top:0;opacity:0;}
+      }
+      @keyframes fadeout{
+        from{top:30px;opacity:1;}
+        to{top:0;opacity:0;}
+      }
+      </style>
+  </head>
+  <body>
+    <div class="signup">
+      <form>
+        <h2 style="color:#fff;">Sign Up</h2>
+        <input type="text" name="username" placeholder="First name">
+        <br><br>
+        <input type="text" name="username" placeholder="Last name">
+        <br><br>
+    
+          <input type="date" name="pass" placeholder="DOB">
+        <br><br>
+        <input type="text" id="txtAadhar" onblur="AadharValidate();"placeholder="Mobile No."/>
+        <br><br>
+           <input id="nb" type="Text" name="pass" placeholder="Email Address">
+        <br><br>
+        
+        <input type="button" value="Sign Up" onclick="myfunction()"><br><br>
+        <div id="msg">Congratulations you have sign up successfully!!!</div>
+          
+          
+          <h5 style="color: black;">Login!<a href="login(1).html" style="text-decoration:none;font-family:'Play',sans-serif; color:darkblue;"> &nbsp; Log In </a></h5>
+        </form> </div>
+        <script>
+          function myfunction()
+          {
+            var x=document.getElementById("msg");
+            x.className="show";
+            setTimeout(function(){
+              x.className=x.className.replace("show","");},3000);
+
+          }
+            
+             function AadharValidate() {
+        var aadhar = document.getElementById("txtAadhar").value;
+        
+        var adharcardTwelveDigit = /^\d{10}$/;
+        var adharSixteenDigit = /^\d{10}$/;
+        
+        if (aadhar != '') {
+            if (aadhar.match(adharcardTwelveDigit)) {
+                return true;
+            }
+            else if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+            else {
+                alert("invalid mobile Number");
+                return false;
+            }
+        }
+             }
+                  function myfunction(){
+                 var ad= document.getElementById("nb").value;
+                 if(ad==''){
+                     alert("you must fill the required above details");
+                     return false;
+                 }
+                 else{
+                     alert("successfully registered");
+                 }
+             }
+            
+          </script>
+          
+   
+  </body>
+  </html>

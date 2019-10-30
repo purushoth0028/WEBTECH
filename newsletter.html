@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title> </title>
+   <link rel="stylesheet" href="style_newsletter.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+ </head>
+ <body>
+  <div class="container">
+     <form  action="">
+          <br><h1> Join Our Newsletter </h1><br>
+         
+          <center>
+          <a href="login.html"> <img src="webD.jpg" width="110" height="100" alt="web_logo"/> </a>
+          </center><br> 
+          <h4 align="center">If you already subscribe,please ignore it! </h4><br>
+         
+          <div class="email-box">
+          <i class="fas fa-envelope"></i>
+          <input class="tbox" type="email" id="na" name="" value="" placeholder="Enter Your Email">
+         <button class="btn" onclick="aaa()" type="button" name="button" name="button"> Subscribe</button>
+          </div>
+         
+          <br><p id="paragraph">Webflix provides a personalized subscription service that allows our members to access movies  (“Webflix content”) streamed over the Internet to certain Internet-connected TVs, computers and other devices.</p><br>
+       
+          
+          </form>
+          </div>
+          </body>
+    <script>
+        function aaa(){
+                 var ac= document.getElementById("na").value;
+                 if(ac==''){
+                     alert("enter your email");
+                     return false;
+                 }
+                 else{
+                     alert("we'll send a message to your email");
+                 }
+             }
+    </script>
+          </html>

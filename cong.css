@@ -1,0 +1,27 @@
+body{
+
+  background: url("elect.jpg") ;
+  background-size: cover;
+}
+a
+{
+  color:yellow;
+  font-family: tahoma,Geneva,sans-serif;
+  margin-left: 30px;
+
+}
+.cong
+{
+  background:rgba(42,62,80,0.7);
+  padding: 40px;
+  margin-top: 80px;
+  height: 200px;
+  margin-left: 180px;
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 240px;
+}
+h2{
+  margin-top:50px;
+  margin-left: 10px;
+}

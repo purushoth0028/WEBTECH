@@ -1,0 +1,27 @@
+*{
+  background-color:black;
+}
+#btn1{
+color:blue;
+border-radius: 10%;
+}
+#btn2{
+color:red;
+}
+#btn3{
+color:white;
+}
+.video{
+  border:-30px;
+
+}
+#myVideo{
+  padding:0px;
+  margin: 0px;
+  border: solid red;
+ position:absolute;
+ display:run-in; 
+ border-width: thin;
+
+
+}

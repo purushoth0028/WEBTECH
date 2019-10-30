@@ -1,0 +1,42 @@
+*{
+  
+    background-color: black;
+}
+#btn1{
+color:blue;
+border-radius: 10%;
+}
+#btn2{
+color:red;
+}
+#btn3{
+color:white;
+}
+#play-pause-button{
+	color:green;
+}
+#stop-button{
+	color:yellow;
+}
+#volume-inc-button{
+	color:maroon;
+}
+#volume-dec-button{
+	color:gray;
+	
+}
+#mute-button{
+	color:pink;
+}
+#replay-button{
+	color:silver;
+}
+#progress-bar
+{
+	color:darkred;
+}
+.video{
+	 border:-30px;
+}
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale-1">
+  <link rel="stylesheet" href="style_videocontrol.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+<body>
+
+
+<button id="btn1" onclick="enableControls()" type="button"> <i class="fa fa-eye"></i> Show</button>
+<br/>
+<button id="btn2" onclick="disableControls()" type="button"><i class="fa fa-eye-slash"></i>
+Hide</button>
+<br/>
+<button id="btn3" onclick="checkControls()" type="button"><i class="fa fa-check-circle" ></i>Check</button><br>
+<br/>
+<br/>
+<video id="myVideo" width="920" height="500" rounded float-left>
+  <source src="ts.mkv" type="video/webm">
+  <source src="ts.webm" type="video/webm">
+
+</video>
+
+<script>
+var vid = document.getElementById("myVideo");
+
+function enableControls() {
+  vid.controls = true;
+  vid.load();
+}
+
+function disableControls() {
+  vid.controls = false;
+  vid.load();
+}
+
+function checkControls() {
+  alert(vid.controls);
+}
+</script>
+
+
+</body>
+</html>

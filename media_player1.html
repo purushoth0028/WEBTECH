@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <meta charset='utf-8' />
+      <title>Video Controls</title>
+      <link href='media_player.css' rel='stylesheet' />
+       <link rel="stylesheet" href="style.css" />
+      <script src='media_player.js'></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       
+       <style>
+          .ab
+           {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(avengers_endgame.jpg);
+    background-position: center;
+    background-size: cover;
+          }
+       </style>
+   </head>
+   <body class="ab">
+      <div id='media-player'>
+         <video id='media-video' controls width="1000" height="500">
+            <source src="Endgame(2019).mp4" type="video/webm">
+            <source src='Endgame(2019).webm' type='video/webm'>
+         </video>
+		 </div>
+         <div id='media-controls'>
+<button id='play-pause-button' class='play' title='play'
+onclick='togglePlayPause();'>Play</button>
+</div>
+<button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+<button id='volume-inc-button' class='volume-plus' title='increase volume'
+onclick='changeVolume("+");'>Increase volume</button>
+<button id='volume-dec-button' class='volume-minus' title='decrease volume'
+onclick='changeVolume("-");'>Decrease volume</button>
+
+
+<button id='mute-button' class='mute' title='mute' onclick='toggleMute();'>Mute</button>
+<button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>
+<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+
+<button id="btn1" onclick="enableControls()" type="button">Show controls</button>
+<br/>
+<button id="btn2" onclick="disableControls()" type="button">Hide controls</button>
+<br/>
+<button id="btn3" onclick="checkControls()" type="button">Check controls status</button><br>
+<br/>
+<br/>
+      </div>
+    
+    
+    
+    
+    
+    <center><h1 style=color:white;>Give your rating for this movie</h1></center>
+	
+<form id="ratingsForm">
+	<div class="stars">
+		<input type="radio" name="star" class="star-1" id="star-1" />
+		<label class="star-1" for="star-1">1</label>
+		<input type="radio" name="star" class="star-2" id="star-2" />
+		<label class="star-2" for="star-2">2</label>
+		<input type="radio" name="star" class="star-3" id="star-3" />
+		<label class="star-3" for="star-3">3</label>
+		<input type="radio" name="star" class="star-4" id="star-4" />
+		<label class="star-4" for="star-4">4</label>
+		<input type="radio" name="star" class="star-5" id="star-5" />
+		<label class="star-5" for="star-5">5</label>
+		<span></span>
+	</div>
+  
+</form>
+    
+    
+    <br>
+    <center>
+    <button onclick="abcd()" style="color: white;">send</button>
+    </center>
+    
+    
+    
+    <div class="info">
+      <label for="example" style="color: white;">comment your feedback </label>
+      <input id="example" type="text"
+             name="text" size="20" style="color: white;">
+      <input id="sent" type="submit"  
+             value="Send" style="color: white;"> 
+  </div>
+    <p id="para" style="color: white;">      
+    </p>
+    
+    <script>
+    window.onclick = function(e)
+    {   var id =  e.target.id;   
+     if (id === 'sent')  
+     { var txt = document.getElementById('example').value    
+       $( "#para" ).empty().append( txt );
+     }
+    }
+window.onclick = function(e)
+    {   var id =  e.target.id;   
+       if (id === 'sent')  
+       { var txtbox = document.getElementById('example');  
+         var txt = txtbox.value;
+         $( "#para" ).append( txt + '<br>');
+         $( txtbox ).val('');  
+       }
+    }
+var a = [];
+a.push(txt);
+  </script>
+    
+    
+    
+    <script>
+       function abcd()
+        {
+            alert("thanks for your rating");
+        }
+    </script>
+	  <script>
+	  var vid = document.getElementById("media-video");
+
+function enableControls() {
+  vid.controls = true;
+  vid.load();
+}
+
+function disableControls() {
+  vid.controls = false;
+  vid.load();
+}
+
+function checkControls() {
+  alert(vid.controls);
+}
+</script>
+
+
+
+   </body>
+</html>
